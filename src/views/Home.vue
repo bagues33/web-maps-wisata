@@ -4,7 +4,7 @@
 		<div class="hero-content flex-col lg:flex-row">
 	    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
 	    <div>
-	      <h1 class="text-5xl font-bold">Find Your Best Healing Place!</h1>
+	      <h1 class="text-3xl sm:text-5xl font-bold">Find Your Best Healing Place!</h1>
 	      <p class="py-6 font-poppins">Rekomendasi tempat hiling untuk melepas penat dari kehidupan pahit kamu. Ciptakan suasana hati senang dan gembira dengan mengunjungi tempat hiling terbaik pilihan kita.</p>
 	      <a href="#content"><button class="btn btn-primary">Get Started</button></a>
 	    </div>
@@ -131,8 +131,8 @@
 					<span v-if="notFound" class="indicator-item w-24 indicator-center badge badge-error p-3 text-white">Not found</span> 
 					<span  v-else class="indicator-item indicator-center badge badge-success p-3 text-white">Found</span> 
 					  <div class="modal-box">
-					  	<div class="flex">
-					  		<div class="w-1/2">
+					  	<div class="flex sm:flex-nowrap flex-wrap">
+					  		<div class="sm:w-1/2 w-full">
 						  		<h3 class="font-bold text-xl"><i class="fa-solid fa-circle-info"></i> Detail Place</h3>
 						  		<h4 class="mt-3 font-bold" v-if="notFound">Maaf gais, data tidak ditemukan!</h4>
 							    <p v-else class="py-4 font-poppins">
@@ -147,8 +147,8 @@
 											</ul>
 							    </p>
 					  		</div>
-						  	<div class="w-1/2">
-						  		<img v-if="notFound" class="w-4/5" src="../assets/img/error.png">
+						  	<div class="sm:w-1/2 w-full">
+						  		<img v-if="notFound" class="sm:w-4/5 w-36 mx-auto mt-3" src="../assets/img/error.png">
 						  		<div v-else id="map2" class="w-full h-48"></div>
 						  	</div>
 					  	</div>

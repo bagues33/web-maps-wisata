@@ -20,7 +20,7 @@
         <li><router-link to="/about">About</router-link></li>
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl"><img class="w-12 mr-2" src="../assets/img/favicon.png"> Hilling Spot</a>
+    <a class="btn btn-ghost normal-case text-xl"><img class="w-12 mr-2" src="../assets/img/favicon.png"> <span class="hidden sm:block">Hilling Spot</span></a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
