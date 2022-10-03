@@ -1,5 +1,5 @@
 <template>
-	<div class="hero max-h-screen bg-base-200">
+	<div class="hero sm:max-h-screen max-h-[110vh] bg-base-200">
 	<div class="container">
 		<div class="hero-content flex-col lg:flex-row">
 	    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
