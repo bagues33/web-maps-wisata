@@ -21,7 +21,7 @@
 		  <div class="md:grid md:grid-cols-3 md:gap-6 sm:mt-0 mt-10">
 		    <div class="md:col-span-1">
 		      <div class="myLocation mt-6 mx-4">
-		      	<h4 class="font-bold font-adelia">Anda berada di lokasi :</h4>
+		      	<h4 class="font-bold text-xl font-adelia">Anda berada di lokasi :</h4>
 		      	<div class="flex mt-3 items-start">
 		      		<img class="w-24 mr-3" src="../assets/img/map.png">
 		      		<div v-if="loadingMyLocation" class="w-full text-center">
@@ -34,8 +34,8 @@
 		      	</div>
 		      </div>
 		      <div v-if="myLocation" class="w-full h-48 mt-5" id="map"></div>
-		      <div v-else class="sm:mx-2 mx-6">
-		      	<img class="sm:mx-0 mx-4" src="../assets/img/route.png">
+		      <div v-else class="sm:mx-6 mx-6">
+		      	<img class="sm:mx-0" src="../assets/img/route.png">
 		      </div>
 		    </div>
 		    <div class="mt-5 md:col-span-2 md:mt-0">
