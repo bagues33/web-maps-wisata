@@ -2,7 +2,7 @@
 	<div class="hero sm:max-h-screen max-h-[110vh] bg-base-200">
 	<div class="container">
 		<div class="hero-content flex-col lg:flex-row">
-	    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
+	    <img :src="imageUrl" class="max-w-sm rounded-lg shadow-2xl" />
 	    <div>
 	      <h1 class="text-3xl sm:text-5xl font-bold">Find Your Best Healing Place!</h1>
 	      <p class="py-6 font-poppins">Rekomendasi tempat hiling untuk melepas penat dari kehidupan pahit kamu. Ciptakan suasana hati senang dan gembira dengan mengunjungi tempat hiling terbaik pilihan kita.</p>
@@ -168,6 +168,10 @@
 	import mapboxgl from 'mapbox-gl'
 	import Swal from 'sweetalert2'
 
+	const baseUrl = ref('https://api.unsplash.com/');
+	const apiKey = ref('smTQoMWqlw-S8BPPA_r0vhKO869FVx1l3P0S6ORtTd4');
+	const imageUrl = ref('');
+
 	const lat = ref(0)
 	const lng = ref(0)
 	const type = ref('')
@@ -201,8 +205,29 @@
 	
 	onMounted(() => {
     // getMap()
-    
+		getImageRandom()
 	})
+
+	
+	const getImageRandom = async () => {
+		try {
+			const response = await axios.get(`${baseUrl.value}photos/random`, {
+				params: {
+					// Add your parameters here
+					client_id: apiKey.value,
+					query: 'nature',
+				},
+			});
+
+			// Handle the response here
+			imageUrl.value = response.data.urls.full;
+			console.log("Image Url : ", imageUrl);
+			// Do something with the image URL
+		} catch (error) {
+			// Handle the error here
+			console.error(error);
+		}
+	};
 
 	const coordinates = computed({
   		get() { return `${lat.value}, ${lng.value}` },
